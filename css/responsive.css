@@ -1,0 +1,174 @@
+/* 
+ * Branson Land Management - Responsive Styles
+ */
+
+/* Tablet - Medium Devices (768px and up) */
+@media (max-width: 992px) {
+    html {
+      font-size: 15px;
+    }
+    
+    /* Grid adjustments */
+    .about-grid,
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+    
+    .about-image {
+      order: -1;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .about-content,
+    .contact-info {
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    .feature {
+      justify-content: center;
+    }
+    
+    .contact-item {
+      justify-content: center;
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--spacing-md);
+    }
+    
+    .footer-links ul {
+      align-items: center;
+    }
+  }
+  
+  /* Mobile - Small Devices (up to 767px) */
+  @media (max-width: 767px) {
+    /* Form adjustments */
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    
+    /* Hours section alignment */
+    .hours-grid {
+      width: fit-content;
+      margin: 0 auto;
+    }
+    /* Navigation mobile styling */
+    .menu-toggle {
+      display: block;
+      z-index: 1001;
+    }
+    
+    .menu-toggle.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-list {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 100vh;
+      background-color: var(--bg-light);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: right var(--transition-medium);
+      z-index: 1000;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-list.active {
+      right: 0;
+    }
+    
+    .nav-list a {
+      color: var(--text-dark);
+      font-size: 1.25rem;
+      padding: var(--spacing-sm) 0;
+    }
+    
+    .nav-cta {
+      margin-top: var(--spacing-sm);
+      padding: 0.75rem 2rem !important;
+    }
+    
+    /* Hero adjustments */
+    .hero-section {
+      min-height: 500px;
+    }
+    
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-tagline {
+      font-size: 1rem;
+    }
+    
+    .hero-cta {
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+    
+    /* Section adjustments */
+    .section {
+      padding: var(--spacing-lg) 0;
+    }
+    
+    /* Service cards adjustments */
+    .services-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    /* Carousel adjustments */
+    .carousel-btn {
+      width: 30px;
+      height: 30px;
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* Very Small Devices (up to 480px) */
+  @media (max-width: 480px) {
+    html {
+      font-size: 14px;
+    }
+    
+    .container {
+      padding: 0 var(--spacing-sm);
+    }
+    
+    .section-title {
+      font-size: 1.75rem;
+    }
+    
+    .hero-content h1 {
+      font-size: 1.75rem;
+    }
+    
+    .contact-form-container {
+      padding: var(--spacing-sm);
+    }
+    
+    .carousel-btn {
+      width: 25px;
+      height: 25px;
+      font-size: 1rem;
+    }
+  }

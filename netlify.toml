@@ -2,9 +2,16 @@
   publish = "."
   command = ""         # no build step for plain HTML
 
-# Redirect contact form “thank you” page
+# Redirect contact form "thank you" page
 [[redirects]]
   from = "/?success=true"
   to   = "/"
+  status = 200
+  force = true
+
+# Redirect contact page success
+[[redirects]]
+  from = "/contact.html?success=true"
+  to   = "/contact.html"
   status = 200
   force = true

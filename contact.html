@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Branson Land Management for professional land clearing and grading services">
+  <title>Contact Us | Branson Land Management</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header scrolled">
+    <div class="container">
+      <div class="logo">Branson Land Management</div>
+      <nav class="main-nav">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#gallery">Our Work</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Reach out to discuss your land management needs</p>
+    </div>
+  </div>
+
+  <section class="section contact-page">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title">Get In Touch</h2>
+          <p>Ready to start your project? Contact us for a free quote or to discuss your land management needs.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-text">Call us: (555) 123-4567</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-text">Email: info@bransonland.com</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-text">Serving the greater Branson area</div>
+            </div>
+          </div>
+          
+          <div class="hours-section">
+            <h3>Business Hours</h3>
+            <div class="hours-grid">
+              <div class="day">Monday - Friday</div>
+              <div class="time">7:00 AM - 6:00 PM</div>
+              
+              <div class="day">Saturday</div>
+              <div class="time">8:00 AM - 2:00 PM</div>
+              
+              <div class="day">Sunday</div>
+              <div class="time">Closed</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <h3>Request a Quote</h3>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+            
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="land-clearing">Land Clearing</option>
+                <option value="grading">Land Grading</option>
+                <option value="site-prep">Site Preparation</option>
+                <option value="other">Other (specify in message)</option>
+              </select>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="property-size">Property Size (acres)</label>
+                <input type="number" id="property-size" name="property-size" min="0.1" step="0.1">
+              </div>
+              
+              <div class="form-group">
+                <label for="time-frame">Desired Timeframe</label>
+                <select id="time-frame" name="time-frame">
+                  <option value="asap">As Soon As Possible</option>
+                  <option value="1-2-weeks">1-2 Weeks</option>
+                  <option value="1-month">Within a Month</option>
+                  <option value="flexible">Flexible</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+          
+          <div id="success-msg" class="success-message" hidden>
+            <p>Thanks for reaching out! We'll be in touch with you shortly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Branson Land Management</h3>
+          <p>Grade. Clear. Prepare. Done right, on time.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#gallery">Our Work</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Branson Land Management. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
