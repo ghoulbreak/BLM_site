@@ -7,18 +7,38 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
   <!-- Hero -->
   <header class="hero">
     <div class="hero-overlay">
-      <h1>Grading & Site Preparation</h1>
-      <p>Quality work, on time & on budget.</p>
+      <h1>Branson Land Management</h1>
+      <p>Grade. Clear. Prepare. Done right, on time.</p>
       <a href="#contact" class="btn">Get a Quote</a>
     </div>
   </header>
 
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <h2>Our Work</h2>
+    <div class="carousel">
+      <button class="carousel-btn prev">‹</button>
+      <img id="carousel-image" src="images/gallery/placeholder.jpg" alt="Gallery image">
+      <button class="carousel-btn next">›</button>
+    </div>
+  </section>
+
+
   <!-- About -->
   <section id="about" class="section">
-    <h2>About JA Grading & Clearing</h2>
+    <h2>About Branson Land Management</h2>
     <p>We pride ourselves on transparent pricing & detailed quotes so you know exactly what you’re paying for.</p>
     <!-- add more bullets/photos here -->
   </section>
@@ -58,5 +78,30 @@
       document.getElementById('success-msg').hidden = false;
     }
   </script>
+  <script>
+    // 1) List your gallery filenames here:
+    const galleryFiles = [
+      'job1.jpg',
+      'job2.jpg',
+      'job3.jpg'
+      // → drop new files into /images/gallery/ and add here
+    ];
+  
+    const basePath = 'images/gallery/';
+    let currentIndex = 0;
+    const imgEl = document.getElementById('carousel-image');
+  
+    function showImage(i) {
+      currentIndex = (i + galleryFiles.length) % galleryFiles.length;
+      imgEl.src = basePath + galleryFiles[currentIndex];
+    }
+  
+    document.querySelector('.prev').addEventListener('click', () => showImage(currentIndex - 1));
+    document.querySelector('.next').addEventListener('click', () => showImage(currentIndex + 1));
+  
+    // start it off
+    showImage(0);
+  </script>
+  
 </body>
 </html>
