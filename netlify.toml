@@ -8,10 +8,3 @@
   to   = "/"
   status = 200
   force = true
-
-# Redirect contact page success
-[[redirects]]
-  from = "/contact.html?success=true"
-  to   = "/contact.html"
-  status = 200
-  force = true

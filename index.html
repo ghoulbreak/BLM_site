@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>JA Grading & Clearing • Land Clearing & Grading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branson Land Management • Land Clearing & Grading</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
   <!-- Hero -->
-  <header class="hero">
+  <header id="hero" class="hero">
     <div class="hero-overlay">
       <h1>Branson Land Management</h1>
       <p>Grade. Clear. Prepare. Done right, on time.</p>
@@ -30,26 +30,38 @@
     <h2>Our Work</h2>
     <div class="carousel">
       <button class="carousel-btn prev">‹</button>
-      <img id="carousel-image" src="images/gallery/placeholder.jpg" alt="Gallery image">
+      <img id="carousel-image" src="images/gallery/job1.jpg" alt="Gallery image">
       <button class="carousel-btn next">›</button>
     </div>
   </section>
 
-
   <!-- About -->
   <section id="about" class="section">
     <h2>About Branson Land Management</h2>
-    <p>We pride ourselves on transparent pricing & detailed quotes so you know exactly what you’re paying for.</p>
-    <!-- add more bullets/photos here -->
+    <p>We pride ourselves on transparent pricing & detailed quotes so you know exactly what you're paying for.</p>
+    
+    <div class="about-features">
+      <div class="feature">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">Licensed and fully insured</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">Modern, well-maintained equipment</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">Environmentally responsible practices</div>
+      </div>
+    </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <!-- Netlify will pick this up automatically -->
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact">
-      <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+      <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
       <label>
         Name:<br>
         <input type="text" name="name" required>
@@ -69,17 +81,20 @@
       <button type="submit" class="btn">Send Message</button>
     </form>
     <!-- Success message -->
-    <p class="success" hidden id="success-msg">Thanks! We’ll be in touch soon.</p>
+    <p class="success" hidden id="success-msg">Thanks! We'll be in touch soon.</p>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Branson Land Management. All rights reserved.</p>
+  </footer>
 
   <script>
     // Show success on redirect
     if (location.search.includes('success=true')) {
       document.getElementById('success-msg').hidden = false;
     }
-  </script>
-  <script>
-    // 1) List your gallery filenames here:
+    
+    // Gallery carousel
     const galleryFiles = [
       'job1.jpg',
       'job2.jpg',
@@ -99,9 +114,8 @@
     document.querySelector('.prev').addEventListener('click', () => showImage(currentIndex - 1));
     document.querySelector('.next').addEventListener('click', () => showImage(currentIndex + 1));
   
-    // start it off
+    // Start carousel
     showImage(0);
   </script>
-  
 </body>
 </html>
