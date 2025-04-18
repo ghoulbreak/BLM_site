@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JP Grading & Clearing • Land Clearing & Grading</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>Grading & Site Preparation</h1>
+      <p>Quality work, on time & on budget.</p>
+      <a href="#contact" class="btn">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About JP Grading & Clearing</h2>
+    <p>We pride ourselves on transparent pricing & detailed quotes so you know exactly what you’re paying for.</p>
+    <!-- add more bullets/photos here -->
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <!-- Netlify will pick this up automatically -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+      <label>
+        Name:<br>
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email:<br>
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Phone:<br>
+        <input type="tel" name="phone">
+      </label>
+      <label>
+        Message:<br>
+        <textarea name="message" rows="4"></textarea>
+      </label>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <!-- Success message -->
+    <p class="success" hidden id="success-msg">Thanks! We’ll be in touch soon.</p>
+  </section>
+
+  <script>
+    // Show success on redirect
+    if (location.search.includes('success=true')) {
+      document.getElementById('success-msg').hidden = false;
+    }
+  </script>
+</body>
+</html>
