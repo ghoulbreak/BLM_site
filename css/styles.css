@@ -594,6 +594,45 @@ label input:focus, label textarea:focus {
     margin: 0;
   }
   
+  /* Fix hero section bleeding on mobile */
+  .hero {
+    height: auto;
+    min-height: 65vh; /* Use min-height instead of fixed height */
+    padding-bottom: 1rem; /* Add padding at bottom */
+  }
+  
+  .hero-overlay {
+    position: relative; /* Change from absolute to relative for better mobile layout */
+    padding: 2rem 0.5rem; /* Add padding on all sides */
+    min-height: 65vh; /* Match the hero min-height */
+  }
+  
+  .hero-content {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem; /* Ensure space after content */
+    width: 100%;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem; /* Smaller font size on mobile */
+  }
+  
+  .hero p {
+    font-size: 1rem; /* Smaller font size on mobile */
+  }
+  
+  .hero-service-area {
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* Add bottom margin */
+    width: 100%;
+    font-size: 0.9rem; /* Smaller font on mobile */
+  }
+  
+  .veteran-badge {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+  
   .mission-values {
     grid-template-columns: 1fr;
   }
@@ -627,5 +666,29 @@ label input:focus, label textarea:focus {
   
   .service-desc ul {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Add a specific media query for very small screens */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 80vh; /* Increase min-height for smaller screens */
+  }
+  
+  .hero-overlay {
+    min-height: 80vh; /* Match hero min-height */
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem; /* Even smaller on very small screens */
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem; /* Slightly smaller buttons */
+    font-size: 0.9rem;
   }
 }
