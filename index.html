@@ -3,23 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Branson Land Management and Hauling, LLC • Land Clearing & Grading</title>
+  <title>Branson Land Management • Land Clearing, Grading & Tree Services in Central NC</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Professional land clearing, grading, and hauling services in Greensboro, Winston-Salem, High Point, Trinity, and Lexington, NC. Quality work, transparent pricing.">
-  <meta name="keywords" content="land clearing, land grading, tree removal, hauling services, site preparation, North Carolina, Greensboro, Winston-Salem, High Point, Trinity, Lexington, land management">
+  <!-- Enhanced SEO Meta Tags -->
+  <meta name="description" content="Veteran-owned land clearing, grading, tree services, and hauling in Central North Carolina. Serving Greensboro, Winston-Salem, High Point, Trinity, and Lexington with transparent pricing and quality work.">
+  <meta name="keywords" content="land clearing, land grading, tree removal, tree services, fence building, hauling services, site preparation, veteran-owned business, North Carolina, Greensboro, Winston-Salem, High Point, Trinity, Lexington, land management, bush hogging, driveway installation">
   <meta name="author" content="Branson Land Management and Hauling, LLC">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="geo.region" content="US-NC">
+  <meta name="geo.placename" content="Central North Carolina">
   
   <!-- Open Graph / Social Media Meta Tags -->
-  <meta property="og:title" content="Branson Land Management and Hauling - Land Clearing & Grading">
-  <meta property="og:description" content="Professional land clearing, grading, tree services, and hauling in the Triad area of North Carolina.">
-  <meta property="og:image" content="images/BLMH.jpg">
-  <meta property="og:url" content="https://bransonlandmanagement.com">
+  <meta property="og:title" content="Branson Land Management • Land Clearing & Tree Services">
+  <meta property="og:description" content="Veteran-owned land clearing, grading, tree services, and hauling in Central NC. Quality work with transparent pricing from a family-owned business.">
+  <meta property="og:image" content="/images/BLMH.jpg">
+  <meta property="og:url" content="https://bransonlm.netlify.app">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Branson Land Management and Hauling">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Branson Land Management • Land Clearing & Tree Services">
+  <meta name="twitter:description" content="Veteran-owned land clearing, grading, tree services in Central NC. Quality work with transparent pricing.">
+  <meta name="twitter:image" content="/images/BLMH.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bransonlm.netlify.app">
   
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Leaflet.js CSS - updated to specific version -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Branson Land Management and Hauling, LLC",
+    "image": "/images/BLMH.jpg",
+    "description": "Veteran-owned land management services including clearing, grading, tree services, hauling, and fence building in Central North Carolina.",
+    "url": "https://bransonlm.netlify.app",
+    "telephone": "",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.825,
+      "longitude": -80.30
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.95,
+        "longitude": -80.20
+      },
+      "geoRadius": "50000"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100090478683900"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    "priceRange": "$$",
+    "servesCuisine": ["Land Clearing", "Tree Services", "Bush Hogging", "Grading", "Fence Building", "Hauling"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Land Management Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Tree Services",
+            "description": "Professional tree care with safety as our top priority."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Land Clearing & Bush Hogging",
+            "description": "Transforming overgrown properties into usable space."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Grading & Driveways",
+            "description": "Creating level, stable foundations for your construction projects."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Hauling Services",
+            "description": "Reliable material transport and debris removal."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fence Building",
+            "description": "Quality fence construction for privacy, security, and property definition."
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
     <nav>
@@ -66,7 +176,7 @@
     <div class="services-container">
       <div class="service-card">
         <div class="service-image">
-          <img src="images/trimming2.jpeg" alt="Tree trimming service">
+          <img src="images/trimming2.jpeg" alt="Professional tree trimming and removal service by Branson Land Management in North Carolina">
         </div>
         <div class="service-desc">
           <h3>Tree Services</h3>
@@ -83,7 +193,7 @@
       
       <div class="service-card">
         <div class="service-image">
-          <img src="images/bushhog.PNG" alt="Tree trimming service">
+          <img src="images/bushhog.PNG" alt="Land clearing and bush hogging services in Central NC by Branson Land Management">
         </div>
         <div class="service-desc">
           <h3>Land Clearing & Bush Hogging</h3>
@@ -100,7 +210,7 @@
       
       <div class="service-card">
         <div class="service-image">
-          <img src="images/driveway2.jpg" alt="Tree trimming service">
+          <img src="images/driveway2.jpg" alt="Professional driveway installation and grading services in North Carolina">
         </div>
         <div class="service-desc">
           <h3>Grading & Driveways</h3>
@@ -117,7 +227,7 @@
       
       <div class="service-card">
         <div class="service-image placeholder-image">
-          <img src="images/hauling.jpg" alt="Tree trimming service">
+          <img src="images/hauling.jpg" alt="Material hauling and debris removal services by Branson Land Management">
         </div>
         <div class="service-desc">
           <h3>Hauling Services</h3>
@@ -134,7 +244,7 @@
       
       <div class="service-card">
         <div class="service-image placeholder-image">
-          <img src="images/fence2.jpg" alt="Tree trimming service">
+          <img src="images/fence2.jpg" alt="Quality fence building and installation services in Central North Carolina">
         </div>
         <div class="service-desc">
           <h3>Fence Building</h3>
