@@ -217,8 +217,7 @@
           <p>Creating level, stable foundations for your construction projects with precise grading techniques and driveway solutions.</p>
           <ul>
             <li>Property leveling</li>
-            <li>Drainage solutions</li>
-            <li>Water systems</li>
+            <li>Water drainage systems</li>
             <li>Driveway installation & repair</li>
             <li>Foundation preparation</li>
           </ul>
@@ -410,7 +409,16 @@
     document.getElementById('service-map').style.height = '450px';
     document.getElementById('service-map').style.width = '100%';
     
-    var map = L.map('service-map').setView([35.95, -80.20], 9); // Reduced zoom level to show more context
+    var map = L.map('service-map', {
+      zoomControl: false,      // Remove zoom controls
+      dragging: false,         // Disable map dragging
+      touchZoom: false,        // Disable touch zoom
+      scrollWheelZoom: false,  // Disable scroll wheel zoom
+      doubleClickZoom: false,  // Disable double click zoom
+      boxZoom: false,          // Disable box zoom
+      keyboard: false,         // Disable keyboard navigation
+      tap: false               // Disable tap handler for mobile
+    }).setView([35.95, -80.20], 10);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -421,9 +429,15 @@
     // Business headquarters location (just west of Lexington, NC)
     var headquartersCoords = [35.825, -80.30];
     
-    // Create a default marker for headquarters instead of custom icon to avoid path issues
-    var headquarters = L.marker(headquartersCoords).addTo(map)
-      .bindPopup("<b>Branson Land Management</b><br>Headquarters").openPopup();
+    // Create a simple red circle for headquarters instead of a marker
+    var headquarters = L.circleMarker(headquartersCoords, {
+      radius: 6,
+      fillColor: 'red',
+      color: '#fff',
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 1
+    }).addTo(map);
 
     // Service area polygon (covering Greensboro, Winston-Salem, High Point, Trinity, and Lexington)
     var serviceAreaCoords = [
