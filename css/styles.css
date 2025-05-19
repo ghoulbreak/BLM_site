@@ -593,6 +593,98 @@ label input:focus, label textarea:focus {
   align-items: flex-start;
 }
 
+/* Map Section Styles */
+.map-section {
+  background-color: #f9f9f9;
+  padding: 2rem 0;
+}
+
+.map-container {
+  max-width: 900px;
+  height: 450px;
+  margin: 0 auto 1rem auto;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+}
+
+#service-map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-info {
+  text-align: center;
+  font-style: italic;
+  margin: 1rem auto;
+  max-width: 800px;
+  color: #555;
+}
+
+/* Map Legend Styles */
+.map-legend {
+  background: white;
+  padding: 12px;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.legend-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--brand-dark);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 3px;
+  background-color: var(--brand-orange);
+  opacity: 0.25;
+  border: 2px solid var(--brand-orange);
+}
+
+.legend-icon {
+  width: 20px; 
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Custom styles for headquarters marker */
+.headquarters-icon {
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Responsive map adjustments */
+@media (max-width: 768px) {
+  .map-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    height: 300px;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .nav-container {

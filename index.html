@@ -18,6 +18,8 @@
   <meta property="og:type" content="website">
   
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Leaflet.js CSS - updated to specific version -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
     <nav>
@@ -43,12 +45,20 @@
       <div class="veteran-badge">Veteran Owned & Operated</div>
       <div class="hero-content">
         <h1>Branson Land Management and Hauling, LLC</h1>
-        <p>The "farm boy" for hire that you wish was your child, nephew or grandchild.</p>
+        <p>The farm hands that you wish worked on your ranch</p>
         <a href="#contact" class="btn">Get a Quote</a>
       </div>
-      <div class="hero-service-area">Proudly serving Greensboro, Winston-Salem, High Point, Trinity, and Lexington, NC</div>
     </div>
   </header>
+
+  <!-- Service Area Map -->
+  <section id="service-area" class="section map-section">
+    <h2>Our Service Area</h2>
+    <div id="service-map" class="map-container"></div>
+    <div class="map-info">
+      <p>Based in central North Carolina, we service clients throughout the highlighted region including Greensboro, Winston-Salem, High Point, Trinity, and Lexington</p>
+    </div>
+  </section>
 
   <!-- Services Section -->
   <section id="services" class="section">
@@ -208,7 +218,7 @@
         </div>
         <div class="value-item">
           <h3>Business Approach</h3>
-          <p>Not wanting to run a multi-million dollar business. Just a family owned and operated business. Willing to work individually and any small job is a good job for Branson Land Management. Willing to work with property owners for phased approach developing the land over multiple years to spread out the costs.</p>
+          <p>"Don't grow too big too fast. Remain a family owned and operated business that maintains core values of Quality and Customer Relations. Willing to work jobs that are "small" for the other guys. Willing to build customer relations for phased development of private lands. Be available in emergency situations to help someone."</p>
         </div>
       </div>
     </div>
@@ -263,10 +273,75 @@
     <p class="success" hidden id="success-msg">Thanks! We'll be in touch soon.</p>
   </section>
 
+  <!-- Leaflet.js - updated to specific version -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- Facebook SDK -->
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"></script>
 
   <script>
+    // Initialize the service area map with explicit dimensions to ensure visibility
+    document.getElementById('service-map').style.height = '450px';
+    document.getElementById('service-map').style.width = '100%';
+    
+    var map = L.map('service-map').setView([35.95, -80.20], 9); // Reduced zoom level to show more context
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Business headquarters location (just west of Lexington, NC)
+    var headquartersCoords = [35.825, -80.30];
+    
+    // Create a default marker for headquarters instead of custom icon to avoid path issues
+    var headquarters = L.marker(headquartersCoords).addTo(map)
+      .bindPopup("<b>Branson Land Management</b><br>Headquarters").openPopup();
+
+    // Service area polygon (covering Greensboro, Winston-Salem, High Point, Trinity, and Lexington)
+    var serviceAreaCoords = [
+      [36.54, -81.45], // NW edge
+      [36.69, -80.69],
+      [36.64, -79.64],
+      [36.34, -79.04], // NE edge
+      [35.80, -78.71],
+      [35.13, -79.01], // E edge
+      [34.95, -80.96], // SE edge
+      [35.72, -81.52], // SW edge
+    ];
+    
+    var serviceArea = L.polygon(serviceAreaCoords, {
+      color: '#F7941D',              // Hardcoded brand-orange color
+      fillColor: '#F7941D',          // Hardcoded brand-orange color
+      fillOpacity: 0.25,
+      weight: 3
+    }).addTo(map);
+    
+    // Fit the map to show the entire service area with padding
+    map.fitBounds(serviceArea.getBounds(), {
+      padding: [30, 30],  // Add 30px padding around the service area
+      maxZoom: 9         // Don't zoom in closer than level 9
+    });
+    
+    // Add service area legend with hardcoded colors
+    var legend = L.control({position: 'bottomright'});
+    
+    legend.onAdd = function(map) {
+      var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML = '<div style="background:white; padding:8px; border-radius:4px; box-shadow:0 1px 5px rgba(0,0,0,0.2);">' +
+        '<div style="font-weight:bold; margin-bottom:5px; color:#222; border-bottom:1px solid #ddd; padding-bottom:3px;">Service Coverage</div>' +
+        '<div style="display:flex; align-items:center; margin-top:5px;">' +
+          '<span style="width:20px; height:20px; margin-right:8px; border-radius:3px; background-color:#F7941D; opacity:0.25; border:2px solid #F7941D; display:block;"></span>Service Area' +
+        '</div>' +
+        '<div style="display:flex; align-items:center; margin-top:5px;">' +
+          '<span style="width:10px; height:10px; margin-right:8px; background-color:red; border-radius:50%; display:block;"></span>Headquarters' +
+        '</div>' +
+      '</div>';
+      return div;
+    };
+    
+    legend.addTo(map);
+
     // Show success on redirect
     if (location.search.includes('success=true')) {
       document.getElementById('success-msg').hidden = false;
