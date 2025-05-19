@@ -594,9 +594,16 @@ label input:focus, label textarea:focus {
 }
 
 /* Map Section Styles */
-.map-section {
+.map-section-wrapper {
   background-color: #f9f9f9;
   padding: 2rem 0;
+  width: 100%;
+}
+
+.map-section-wrapper .section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .map-container {
