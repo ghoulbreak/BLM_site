@@ -1,8 +1,15 @@
 # Robots.txt for Branson Land Management and Hauling
 User-agent: *
 Allow: /
-Sitemap: https://bransonlm.netlify.app/sitemap.xml
+Sitemap: https://bransonlandmgt.com/sitemap.xml
 
 # Optimized for maximum crawlability
 Disallow: 
 Crawl-delay: 10
+
+# Additional directives for better indexing
+# Priority for concrete and tree services
+Allow: /#services
+Allow: /#concrete-services
+Allow: /#tree-services
+Allow: /#contact
