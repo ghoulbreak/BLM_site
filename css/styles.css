@@ -9,6 +9,16 @@
 * { box-sizing: border-box; margin:0; padding:0; }
 body { font-family: sans-serif; color: var(--txt-dark); line-height:1.5; }
 
+/* Smooth scrolling and scroll offset for sticky nav */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add scroll offset to account for sticky navigation */
+section {
+  scroll-margin-top: 140px; /* Adjust based on nav height */
+}
+
 /* Navigation Styles */
 nav {
   background-color: var(--txt-light);
