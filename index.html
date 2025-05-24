@@ -102,19 +102,10 @@
         </div>
     </nav>
       
-  <!-- Hero -->
-  <header class="hero" id="top">
-    <div class="hero-overlay">
-      <div class="veteran-badge">Veteran Owned & Operated</div>
-      <div class="hero-content">
-        <h1>Branson Land Management and Hauling, LLC</h1>
-        <p>The farm hands that you wish worked on your ranch</p>
-        <a href="#contact" class="btn">Get a Quote</a>
-      </div>
-    </div>
-  </header>
+  <!-- Hero Section - Loaded from partial -->
+  <div id="hero-section"></div>
 
-  <!-- Service Area Map -->
+  <!-- Service Area Map - Kept in main file -->
   <div class="map-section-wrapper">
     <section id="service-area" class="section">
       <h2>Our Service Area</h2>
@@ -125,316 +116,20 @@
     </section>
   </div>
 
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="services-container">
-      <div id="concrete-services" class="service-card">
-        <div class="service-image">
-          <img src="images/concrete.jpg" alt="Expert concrete driveway installation and concrete services in Greensboro, Winston-Salem and High Point NC">
-        </div>
-        <div class="service-desc">
-          <h3>Concrete Services in Central North Carolina</h3>
-          <p>Professional concrete installation and finishing for residential and commercial properties. We deliver durable, attractive concrete solutions built to last with proper drainage and reinforcement.</p>
-          <ul>
-            <li>Concrete driveways with proper drainage and reinforcement</li>
-            <li>Level building pads for sheds, garages and outbuildings</li>
-            <li>Engineered house footings and concrete foundations</li>
-            <li>Smooth, even sidewalks and pathways</li>
-            <li>Decorative stamped concrete walkways and patios</li>
-          </ul>
-        </div>
-      </div>
+  <!-- Services Section - Loaded from partial -->
+  <div id="services-section"></div>
 
-      <div id="tree-services" class="service-card">
-        <div class="service-image">
-          <img src="images/trimming2.jpeg" alt="Professional tree trimming and removal services in Greensboro, Winston-Salem and High Point NC">
-        </div>
-        <div class="service-desc">
-          <h3>Tree Removal & Trimming Services in Central NC</h3>
-          <p>Professional tree removal and trimming with safety as our top priority. We serve Central NC with expert tree care, using proper techniques to ensure controlled removal and maintenance.</p>
-          <ul>
-            <li>Hazardous and dangerous tree removal</li>
-            <li>Precision tree trimming and cutting</li>
-            <li>Tree pruning and crown maintenance</li>
-            <li>Stump grinding and removal</li>
-            <li>24/7 emergency tree services</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-image">
-          <img src="images/bushhog.PNG" alt="Land clearing and bush hogging services in Central NC">
-        </div>
-        <div class="service-desc">
-          <h3>Land Clearing & Bush Hogging</h3>
-          <p>Transforming overgrown properties into usable space with efficient equipment and expertise.</p>
-          <ul>
-            <li>Residential lot clearing</li>
-            <li>Commercial development</li>
-            <li>Selective clearing</li>
-            <li>Bush hogging</li>
-            <li>Brush & debris removal</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-image">
-          <img src="images/driveway2.jpg" alt="Professional driveway installation and grading services">
-        </div>
-        <div class="service-desc">
-          <h3>Grading & Driveways</h3>
-          <p>Creating level, stable foundations with precise grading techniques and driveway solutions.</p>
-          <ul>
-            <li>Property leveling</li>
-            <li>Water drainage systems</li>
-            <li>Driveway installation & repair</li>
-            <li>Foundation preparation</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-image">
-          <img src="images/hauling.jpg" alt="Material hauling and debris removal services">
-        </div>
-        <div class="service-desc">
-          <h3>Hauling Services</h3>
-          <p>Reliable material transport and debris removal to keep your project moving.</p>
-          <ul>
-            <li>Debris removal</li>
-            <li>Gravel delivery (up to 8 tons)</li>
-            <li>Material delivery</li>
-            <li>Equipment transport</li>
-            <li>Construction waste hauling</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-image">
-          <img src="images/fence2.jpg" alt="Quality fence building and installation services">
-        </div>
-        <div class="service-desc">
-          <h3>Fence Building</h3>
-          <p>Quality fence construction for privacy, security, and property definition with durable materials.</p>
-          <ul>
-            <li>Privacy fences</li>
-            <li>Security barriers</li>
-            <li>Wooden fences</li>
-            <li>Farm fencing</li>
-            <li>Post installation</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Contact Section - Loaded from partial -->
+  <div id="contact-section"></div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form" netlify>
-      <input type="hidden" name="form-name" value="contact">
-      <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
-      <label>
-        Name:<br>
-        <input type="text" name="name" required id="name">
-        <span class="error-message" id="name-error"></span>
-      </label>
-      <label>
-        Email:<br>
-        <input type="email" name="email" required id="email">
-        <span class="error-message" id="email-error"></span>
-      </label>
-      <label>
-        Phone:<br>
-        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}[-. ]?[0-9]{3}[-. ]?[0-9]{4}">
-        <span class="form-hint">Format: 555-555-5555</span>
-        <span class="error-message" id="phone-error"></span>
-      </label>
-      <label>
-        Message:<br>
-        <textarea name="message" rows="4" id="message" required></textarea>
-        <span class="error-message" id="message-error"></span>
-      </label>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <p class="success" hidden id="success-msg">Thanks! We'll be in touch soon.</p>
-  </section>
+  <!-- Social Media Section - Loaded from partial -->
+  <div id="social-section"></div>
 
-  <!-- Social Media Section -->
-  <section id="social" class="section">
-    <h2>Follow Our Projects</h2>
-    <div class="social-content-wrapper">
-      <div class="social-description">
-        <h3>See Our Latest Work</h3>
-        <p>Follow us on Facebook to see our latest projects, equipment in action, and transformations we've made for our clients.</p>
-        <p>We regularly post photos of our work in progress and completed projects. It's the best way to see what we can do for you!</p>
-        <a href="https://www.facebook.com/profile.php?id=100090478683900" class="social-btn" target="_blank" rel="noopener noreferrer">
-          <svg class="fb-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20">
-            <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
-          </svg>
-          Visit Our Facebook Page
-        </a>
-      </div>
-      
-      <!-- Facebook Feed Preview -->
-      <div class="fb-preview-wrapper">
-        <div class="recent-post-preview">
-          <div class="preview-header">
-            <img src="images/BLMH.jpg" alt="Branson Land Management Logo" class="preview-profile">
-            <div class="preview-name-time">
-              <div class="preview-name">Branson Land Management and Hauling, LLC</div>
-              <div class="preview-time">Recent update</div>
-            </div>
-          </div>
-          <div class="preview-content">
-            <p>Few dead pines taken down at commercial property in Winston-Salem</p>
-            <div class="preview-services">
-              <a href="#services" class="preview-service-link"><span>✓ Trees</span></a>
-              <a href="#services" class="preview-service-link"><span>✓ Grading</span></a>
-              <a href="#services" class="preview-service-link"><span>✓ Clearing</span></a>
-            </div>
-            <a href="https://www.facebook.com/profile.php?id=100090478683900" target="_blank" rel="noopener noreferrer" class="preview-cta">See more projects on our Facebook page</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="fb-root"></div>
-  </section>
+  <!-- About Section - Loaded from partial -->
+  <div id="about-section"></div>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About Branson Land Management and Hauling</h2>
-    <div class="about-header">
-      <div class="veteran-info">
-        <span class="veteran-badge-inline">Veteran Owned & Operated</span>
-        <p>Army Reserves 2018 – 2024</p>
-      </div>
-    </div>
-    <p>We pride ourselves on transparent pricing & detailed quotes so you know exactly what you're paying for.</p>
-    
-    <div class="mission-content">
-      <div class="mission-statement">
-        <h3>Our Mission</h3>
-        <p>"Today I will try to meet the expectations of the ones that believed in me and showed me the way. My mom worked and studied to get her Family Nurse Practitioner license while she raised a family. Her parents worked in the furniture business and maintained a working horse farm. These people have been examples of hard work and dedication. Work hard today to make them proud."</p>
-      </div>
-      <div class="mission-values">
-        <div class="value-item">
-          <h3>Our Goal</h3>
-          <p>Simple. American Dream is alive. To remain in the central NC area, find love, marry, raise children, and establish a respected family owned and operated business.</p>
-        </div>
-        <div class="value-item">
-          <h3>Business Approach</h3>
-          <p>Don't grow too big too fast. Remain a family owned and operated business that maintains core values of Quality and Customer Relations. Willing to work jobs that are "small" for the other guys. Willing to build customer relations for phased development of private lands. Be available in emergency situations to help someone.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="about-services">
-      <div class="service-item">
-        <h3>Land Management</h3>
-        <p>Professional clearing, bush hogging, and property maintenance services for residential and commercial properties.</p>
-      </div>
-      <div class="service-item">
-        <h3>Hauling & Delivery</h3>
-        <p>Efficient debris removal and material transport including gravel delivery up to 8 tons for all your project needs.</p>
-      </div>
-      <div class="service-item">
-        <h3>Complete Solutions</h3>
-        <p>From driveways and drainage systems to landscaping and tree care, we provide comprehensive property solutions.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq" class="section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-container" itemscope itemtype="https://schema.org/FAQPage">
-      <div class="faq-category">
-        <h3>Concrete Services FAQ</h3>
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">How much does a concrete driveway cost in North Carolina?</h4>
-          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              <p>Concrete driveway costs in Central NC vary based on size, finish type, and site preparation needs. Contact us for a free, detailed quote customized to your specific project requirements.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">What types of concrete finishes do you offer?</h4>
-          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              <p>We offer a variety of concrete finishes including standard broom finish, exposed aggregate, stamped patterns for decorative looks, smooth trowel finish, and colored concrete options. Each finish offers different aesthetic and functional benefits.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">How long does it take for a new concrete driveway to cure?</h4>
-          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              <p>While concrete is typically ready for light foot traffic within 24-48 hours, it takes approximately 7 days to cure enough for vehicle traffic. Full curing takes about 28 days. Weather conditions can affect these timeframes.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="faq-category">
-        <h3>Tree Services FAQ</h3>
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">How much does tree removal cost in North Carolina?</h4>
-          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              <p>Tree removal costs in Central NC vary based on tree size, location, complexity of removal, and whether emergency service is required. Contact us for a free assessment and quote for safe, professional tree removal.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">Do you offer emergency tree removal services?</h4>
-          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              <p>Yes, we provide 24/7 emergency tree removal services for hazardous situations such as trees damaged by storms, trees leaning dangerously, or trees fallen on structures. Safety is our priority in all emergency removal situations.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">What's the difference between tree trimming and tree pruning?</h4>
-          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              <p>Tree trimming generally focuses on removing overgrown branches for aesthetic purposes, while pruning is more selective and aims to remove specific branches for the tree's health, structure, and fruit production. Both services are important for maintaining healthy, attractive trees.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="faq-category">
-        <h3>General Questions</h3>
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">What areas do you service in North Carolina?</h4>
-          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              <p>We service Central North Carolina including Greensboro, Winston-Salem, High Point, Trinity, and Lexington. Our service area extends approximately 50 miles from our base location. For specific location inquiries, please contact us.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">Are you licensed and insured?</h4>
-          <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-              <p>Yes, Branson Land Management and Hauling is fully licensed and insured for all services we provide. We maintain comprehensive liability insurance and workers' compensation coverage for your protection and peace of mind.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- FAQ Section - Loaded from partial -->
+  <div id="faq-section"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"></script>
@@ -451,6 +146,18 @@
       ],
       brandColor: '#F7941D'
     };
+
+    // Function to load partial HTML files
+    async function loadPartial(partialName, containerId) {
+      try {
+        const response = await fetch(`partials/${partialName}.html`);
+        if (!response.ok) throw new Error(`Failed to load ${partialName}`);
+        const html = await response.text();
+        document.getElementById(containerId).innerHTML = html;
+      } catch (error) {
+        console.error(`Error loading ${partialName}:`, error);
+      }
+    }
 
     // Initialize map
     function initMap() {
@@ -472,23 +179,9 @@
         radius: 6, fillColor: 'red', color: '#fff', weight: 2, opacity: 1, fillOpacity: 1
       }).addTo(map);
 
-      // Service area polygon (covering Greensboro, Winston-Salem, High Point, Trinity, and Lexington)
-    var serviceAreaCoords = [
-      [36.54, -81.45], // NW edge
-      [36.69, -80.69],
-      [36.64, -79.64],
-      [36.34, -79.04], // NE edge
-      [35.80, -78.71],
-      [35.13, -79.01], // E edge
-      [34.95, -80.96], // SE edge
-      [35.72, -81.52], // SW edge
-    ];
-    
-    var serviceArea = L.polygon(serviceAreaCoords, {
-        color: '#F7941D',              // Hardcoded brand-orange color
-fillColor: '#F7941D',          // Hardcoded brand-orange color
-fillOpacity: 0.25,
-weight: 3
+      // Add service area
+      const serviceArea = L.polygon(mapConfig.serviceArea, {
+        color: mapConfig.brandColor, fillColor: mapConfig.brandColor, fillOpacity: 0.25, weight: 3
       }).addTo(map);
       
       map.fitBounds(serviceArea.getBounds(), { padding: [30, 30], maxZoom: 9 });
@@ -535,18 +228,36 @@ weight: 3
       if (!isValid) event.preventDefault();
     }
 
-    // Initialize on load
-    document.addEventListener('DOMContentLoaded', function() {
+    // Initialize everything when DOM is loaded
+    document.addEventListener('DOMContentLoaded', async function() {
+      // Load all partials
+      await Promise.all([
+        loadPartial('hero', 'hero-section'),
+        loadPartial('services', 'services-section'),
+        loadPartial('contact', 'contact-section'),
+        loadPartial('social', 'social-section'),
+        loadPartial('about', 'about-section'),
+        loadPartial('faq', 'faq-section')
+      ]);
+      
+      // Initialize map after partials are loaded
       initMap();
       
       // Show success message if redirected
       if (location.search.includes('success=true')) {
-        document.getElementById('success-msg').hidden = false;
-        document.getElementById('contact-form').hidden = true;
+        const successMsg = document.getElementById('success-msg');
+        const contactForm = document.getElementById('contact-form');
+        if (successMsg && contactForm) {
+          successMsg.hidden = false;
+          contactForm.hidden = true;
+        }
       }
       
-      // Add form validation
-      document.getElementById('contact-form').addEventListener('submit', validateForm);
+      // Add form validation after contact form is loaded
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', validateForm);
+      }
     });
   </script>
 </body>
