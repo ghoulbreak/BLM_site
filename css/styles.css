@@ -42,7 +42,7 @@
 
   /* Layout */
   --max-w: 1180px;
-  --nav-h: 72px;
+  --nav-h: 96px;
 }
 
 /* ---------- Reset & base ---------- */
@@ -180,7 +180,7 @@ nav {
 
 .logo a { display: block; }
 .logo img {
-  height: 56px;
+  height: 84px;
   width: auto;
   display: block;
 }
@@ -839,10 +839,10 @@ label input:focus, label textarea:focus {
 
 /* ---------- Mobile ---------- */
 @media (max-width: 860px) {
-  :root { --nav-h: 64px; }
+  :root { --nav-h: 76px; }
 
   .nav-container { padding: 0 var(--space-2); }
-  .logo img { height: 44px; }
+  .logo img { height: 64px; }
 
   nav ul {
     gap: var(--space-2);
@@ -881,6 +881,7 @@ label input:focus, label textarea:focus {
   .hero { min-height: 75vh; }
   .map-container { height: 300px; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .logo img { height: 56px; }
 }
 
 /* ---------- Reduced motion ---------- */
